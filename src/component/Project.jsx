@@ -14,7 +14,7 @@ function Project() {
             title: "Online Food Application",
             style: "shadow-orange-500",
             description: "An online food ordering application built with React.js, Tailwind CSS, Redux, Redux Toolkit, and Node.js with Express. It features various restaurants, each with different menus accessible via a menu router. The cart functionality is implemented using Redux, and users must log in to access the payment section, which is secure. JWT tokens are used for authentication, and passwords are hashed with bcrypt. Payments are processed using Razorpay.",
-            demoUrl: "https://restaurant-demo.com"
+            demoUrl: "https://github.com/zishnawaz36/FoodWebsiteFronted"
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ function Project() {
             title: "Invoice Management System",
             style: "shadow-green-500",
             description: "An invoice generator application inspired by Azan Pay. It allows users to input delivery dates, shipping addresses, and other relevant details. The system provides a printable invoice with an authorized signature, showing all itemized payment details. Additionally, users can download the invoice as a PDF.",
-            demoUrl: "https://invoice-demo.com"
+            demoUrl: "https://github.com/zishnawaz36/Invoice_Generator_"
         },
         {
             id: 3,
@@ -30,7 +30,7 @@ function Project() {
             title: "Printify: Print Management",
             style: "shadow-blue-500",
             description: "A print management application that streamlines print jobs. Users can manage printers and track their print jobs effectively. Features include generating reports and monitoring printer status. Technologies used: React, Node.js, Express, MySQL.",
-            demoUrl: "https://printify-demo.com"
+            demoUrl: "https://github.com/zishnawaz36/Printify-Homepage"
         },
         {
             id: 4,
@@ -38,7 +38,7 @@ function Project() {
             title: "Crypto Coin Tracker",
             style: "shadow-purple-500",
             description: "A cryptocurrency tracking application that provides real-time data on the value of various cryptocurrencies. Users can see price fluctuations, value in INR, EUR, and USD, as well as market rank. This project utilizes React for the frontend and REST APIs for data fetching.",
-            demoUrl: "https://github.com/zishnawaz36/coins-page"
+            demoUrl:"https://github.com/zishnawaz36/CryptoCoin"
         }
     ];
 
@@ -82,7 +82,7 @@ function Project() {
                                     rel="noopener noreferrer"
                                     className="px-4 py-2 m-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300"
                                 >
-                                    Demo
+                                    GitHub
                                 </a>
                             </div>
                         </div>
