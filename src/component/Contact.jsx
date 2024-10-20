@@ -11,27 +11,55 @@ function ContactForm() {
     const sendEmail = (e) => {
         e.preventDefault();
 
+        // Check if environment variables are properly loaded
+        if (
+            !process.env.REACT_APP_EMAILJS_SERVICE_ID ||
+            !process.env.REACT_APP_EMAILJS_TEMPLATE_ID ||
+            !process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        ) {
+            setResponseMessage('Environment variables are not configured properly.');
+            return;
+        }
+
         emailjs
-            .sendForm(
-                process.env.REACT_APP_EMAILJS_SERVICE_ID,  // Service ID from .env
-                process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Template ID from .env
-                form.current,
-                process.env.REACT_APP_EMAILJS_PUBLIC_KEY   // Public Key from .env
-            )
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    setResponseMessage('Message sent successfully!');
-                    // Clear form fields after submission
-                    setName('');
-                    setEmail('');
-                    setMessage('');
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                    setResponseMessage('Failed to send message. Please try again.');
-                }
+    .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
+    .then(
+        () => {
+            console.log('SUCCESS!');
+            setResponseMessage('Message sent successfully!');
+
+            // Clear form fields after successful submission
+            setName('');
+            setEmail('');
+            setMessage('');
+        },
+        (error) => {
+            console.log('FAILED...', error);
+
+            // Log the error details safely
+            if (error && error.response) {
+                console.error('Detailed error:', error.response);
+            } else if (error && error.text) {
+                console.error('Error text:', error.text);
+            } else if (error && error.message) {
+                console.error('Error message:', error.message);
+            } else {
+                console.error('Unknown error occurred:', error);
+            }
+
+            // Show a user-friendly error message
+            setResponseMessage(
+                'Failed to send message. Please try again. ' +
+                (error.text || 'Error: ' + error.message || 'An unknown error occurred.')
             );
+        }
+    );
+
     };
 
     return (
@@ -91,7 +119,9 @@ function ContactForm() {
                 </form>
 
                 {responseMessage && (
-                    <p className="mt-4 text-center text-green-400 font-semibold">{responseMessage}</p>
+                    <p className={`mt-4 text-center font-semibold ${responseMessage.includes('successfully') ? 'text-green-400' : 'text-red-400'}`}>
+                        {responseMessage}
+                    </p>
                 )}
             </div>
         </div>
