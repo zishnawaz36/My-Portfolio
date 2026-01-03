@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9cde4157.css",
+    "main.js": "/static/js/main.a4401069.js",
+    "static/media/Bitcoin-PNG-Transparent-HD-Photo.png": "/static/media/Bitcoin-PNG-Transparent-HD-Photo.a35500209239dc3ae140.png",
+    "static/media/Hero.png": "/static/media/Hero.6e8f5ad7c65d7b5a3135.png",
+    "static/media/c--logo-icon-0.png": "/static/media/c--logo-icon-0.666af1b3598c92045b63.png",
+    "static/media/prinitify.png": "/static/media/prinitify.8bb4ae5193d6b690bbee.png",
+    "static/media/restaurant.png": "/static/media/restaurant.9edef04d4fc57dc6615a.png",
+    "static/media/javaScript.png": "/static/media/javaScript.130c0ecd57833da6f75c.png",
+    "static/media/html logo.png": "/static/media/html logo.bc0f12caac6932ca9575.png",
+    "static/media/CMS.png": "/static/media/CMS.751be93bc816e887f08d.png",
+    "static/media/react logo.jpeg": "/static/media/react logo.fc375971bb890475daef.jpeg",
+    "static/media/project1.png": "/static/media/project1.29191e40f4ce473706bd.png",
+    "static/media/Hotel": "/static/media/Hotel.366152231c0cfc258c4c",
+    "static/media/CSS-Logo.png": "/static/media/CSS-Logo.0ca65abfc0c427bc3506.png",
+    "static/media/Web development.jpg": "/static/media/Web development.9b64bce50d5465090a4d.jpg",
+    "index.html": "/index.html",
+    "main.9cde4157.css.map": "/static/css/main.9cde4157.css.map",
+    "main.a4401069.js.map": "/static/js/main.a4401069.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cde4157.css",
+    "static/js/main.a4401069.js"
+  ]
+}
