@@ -1,28 +1,89 @@
-
-import React from 'react';
+import React from "react";
 
 function Introduction() {
-    return (
-        <div className="introduction w-full h-full bg-gray-800 flex flex-col justify-center items-center text-center p-4">
-            <h1 className="text-4xl sm:text-7xl font-bold text-white mb-4">
-                I'm a Full Stack Web Developer
-            </h1>
-            <p className="text-gray-300 py-4 max-w-md">
-                As a passionate and driven full stack web developer, I possess a strong foundation in both frontend and backend technologies. 
-                My skill set includes:
+  return (
+    <section className="w-full min-h-screen bg-black text-white flex items-center justify-center px-4 sm:px-6 py-20 overflow-hidden">
+
+      <div className="max-w-5xl mx-auto text-center">
+
+        {/* Small Heading */}
+        <p className="text-[#86BC25] uppercase tracking-[4px] text-sm font-semibold mb-4">
+          Introduction
+        </p>
+
+        {/* Main Heading */}
+        <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-8">
+          ServiceNow Developer &
+          <span className="text-[#86BC25]">
+            {" "}Full Stack Developer
+          </span>
+        </h1>
+
+        {/* Description */}
+        <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed max-w-4xl mx-auto mb-12">
+          Passionate about building scalable enterprise solutions,
+          workflow automation systems, and modern web applications.
+          Currently working as a
+          <span className="text-white font-semibold">
+            {" "}ServiceNow Developer at Deloitte USI
+          </span>
+          {" "}with experience in enterprise development,
+          client-side scripting, server-side scripting,
+          Flow Designer, GlideAjax, and Service Portal development.
+
+          <br /><br />
+
+          Alongside enterprise technologies,
+          I also have strong expertise in modern full stack development
+          using React.js, Node.js, Express.js, MongoDB,
+          Tailwind CSS, and REST API development.
+        </p>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-6 hover:border-[#86BC25]/40 transition duration-300 shadow-lg">
+            <h3 className="text-xl font-bold text-[#86BC25] mb-3">
+              Frontend
+            </h3>
+
+            <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
+              React.js, Next.js, JavaScript,
+              Tailwind CSS, Redux Toolkit,
+              Responsive UI Development
             </p>
-            <ul className="list-disc list-inside text-gray-400">
-                <li>HTML, CSS, and Tailwind CSS for crafting responsive and visually appealing user interfaces.</li>
-                <li>JavaScript and ReactJS for building dynamic and interactive web applications.</li>
-                <li>Redux for efficient state management in complex applications.</li>
-                <li>NodeJS and ExpressJS for developing robust backend services.</li>
-                <li>MongoDB and MySQL for effective data storage and management.</li>
-            </ul>
-            <p className="text-gray-500 py-4 max-w-md">
-                I am eager to learn and grow in the ever-evolving world of technology, continuously honing my skills to deliver high-quality solutions.
+          </div>
+
+          <div className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-6 hover:border-[#86BC25]/40 transition duration-300 shadow-lg">
+            <h3 className="text-xl font-bold text-[#86BC25] mb-3">
+              Backend
+            </h3>
+
+            <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
+              Node.js, Express.js,
+              REST APIs, JWT Authentication,
+              RBAC, Backend Architecture
             </p>
+          </div>
+
+          <div className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-6 hover:border-[#86BC25]/40 transition duration-300 shadow-lg">
+            <h3 className="text-xl font-bold text-[#86BC25] mb-3">
+              Enterprise Tech
+            </h3>
+
+            <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
+              ServiceNow, GlideAjax,
+              Business Rules, Flow Designer,
+              Service Portal, Workflow Automation
+            </p>
+          </div>
+
         </div>
-    );
+
+      </div>
+
+    </section>
+  );
 }
 
 export default Introduction;

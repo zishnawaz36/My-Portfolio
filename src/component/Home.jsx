@@ -11,81 +11,151 @@ function Home() {
       {/* Hero Section */}
       <section
         name="home"
-        className="w-full min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-800 flex items-start md:items-center pt-24 md:pt-0"
+        className="w-full min-h-screen bg-black text-white flex items-center overflow-hidden py-24 md:py-0"
       >
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col-reverse md:flex-row items-center justify-between gap-10 h-full">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-14">
 
-          {/* Text Section */}
-          <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center animate-fadeIn">
-            <h1 className="text-3xl max-[360px]:text-2xl sm:text-4xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6 leading-tight">
-              Hi, I’m <span className="text-cyan-400">Zeeshan Nawaz</span>
-              <br className="hidden sm:block" />
-              Software Developer
+          {/* Left Content */}
+          <div className="w-full md:w-1/2 text-center md:text-left z-10">
+
+            <p className="text-[#86BC25] text-xs sm:text-sm font-semibold tracking-[3px] sm:tracking-[4px] uppercase mb-4">
+              ServiceNow Developer • Deloitte USI
+            </p>
+
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
+              Hi, I’m{" "}
+              <span className="text-[#86BC25]">
+                Zeeshan Nawaz
+              </span>
             </h1>
 
-            <p className="text-gray-300 mb-3 sm:mb-4 text-sm max-[360px]:text-xs sm:text-base leading-relaxed">
-              Software Developer at <strong>Eazybe</strong>, working on scalable
-              <strong> B2B SaaS backend systems</strong>.
-              Experienced in building secure and high-performance applications using
-              <strong> Node.js</strong>, <strong>Express.js</strong>,
-              <strong> MongoDB</strong>, and <strong>MySQL</strong>.
+            <h2 className="text-lg sm:text-2xl text-gray-300 mb-6 font-medium leading-relaxed">
+              Building Enterprise Solutions & Modern Web Experiences
+            </h2>
+
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-2xl mx-auto md:mx-0">
+              ServiceNow Developer at
+              <span className="text-white font-semibold">
+                {" "}Deloitte USI
+              </span>
+              {" "}with hands-on experience in enterprise workflow automation,
+              client-side scripting, server-side scripting,
+              Business Rules, GlideAjax, Flow Designer,
+              and Service Portal development.
+
+              <br /><br />
+
+              Also experienced in
+              <span className="text-white font-semibold">
+                {" "}React.js, Node.js, Express.js, MongoDB
+              </span>
+              {" "}and modern full stack development.
             </p>
 
-            <p className="text-gray-400 mb-5 text-xs sm:text-sm md:text-base leading-relaxed">
-              Strong in <strong>REST API design</strong>, <strong>JWT</strong>,
-              <strong> RBAC</strong>, <strong>API Security</strong>, and
-              <strong> Razorpay Integration</strong>.
-              Solved <strong>250+ DSA problems</strong> across LeetCode, GFG & CodeChef.
-            </p>
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start w-full sm:w-auto">
 
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <Link
                 to="/projects"
-                className="group text-white px-5 sm:px-6 py-2 sm:py-3 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:scale-105 transition-transform duration-300 shadow-lg text-sm sm:text-base"
+                className="group w-full sm:w-auto justify-center px-7 py-3 bg-[#86BC25] hover:bg-[#6d991d] rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg hover:scale-105"
               >
                 View Projects
-                <span className="group-hover:rotate-90 duration-300">
-                  <MdKeyboardArrowRight size={20} className="ml-1" />
-                </span>
+
+                <MdKeyboardArrowRight
+                  size={22}
+                  className="group-hover:rotate-90 duration-300"
+                />
               </Link>
 
               <a
-                href="https://drive.google.com/file/d/1QaDRVxP_uCun9y7h9CpEALkK_WIkQEgg/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1QaDRVxP_uCun9y7h9CpEALkK_WIkQEgg/view"
                 target="_blank"
                 rel="noreferrer"
-                className="px-5 sm:px-6 py-2 sm:py-3 rounded-md border border-cyan-400 text-cyan-400 hover:bg-cyan-500 hover:text-white transition duration-300 text-sm sm:text-base"
+                className="w-full sm:w-auto text-center px-7 py-3 border border-[#86BC25] text-[#86BC25] rounded-xl hover:bg-[#86BC25] hover:text-black transition-all duration-300 font-semibold"
               >
                 Download Resume
               </a>
+
             </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 text-center md:text-left">
+
+              <div>
+                <h3 className="text-3xl font-bold text-[#86BC25]">
+                  250+
+                </h3>
+
+                <p className="text-gray-400 text-sm mt-1">
+                  DSA Problems Solved
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-3xl font-bold text-[#86BC25]">
+                  ServiceNow
+                </h3>
+
+                <p className="text-gray-400 text-sm mt-1">
+                  Enterprise Development
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-3xl font-bold text-[#86BC25]">
+                  MERN
+                </h3>
+
+                <p className="text-gray-400 text-sm mt-1">
+                  Full Stack Projects
+                </p>
+              </div>
+
+            </div>
+
           </div>
 
-          {/* Image Section */}
-          <div className="w-full md:w-1/2 flex justify-center mt-16 md:mt-0">
+          {/* Right Image */}
+          <div className="w-full md:w-1/2 flex justify-center relative">
+
+            {/* Green Glow */}
+            <div className="absolute w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] bg-[#86BC25] opacity-20 blur-[100px] rounded-full"></div>
+
             <img
               src={heroImage}
               alt="Zeeshan Nawaz"
-              className="rounded-2xl w-4/5 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-xl shadow-cyan-500/40 hover:scale-105 transition-transform duration-500 object-cover"
+              className="relative rounded-3xl w-[230px] xs:w-[260px] sm:w-[340px] md:w-[430px] border border-[#86BC25]/20 shadow-2xl shadow-[#86BC25]/10 hover:scale-105 transition-transform duration-500 object-cover"
             />
+
           </div>
+
         </div>
       </section>
 
-      {/* Skills & Experience */}
+      {/* Skills Section */}
       <Skills />
+
+      {/* Experience Section */}
       <Experience />
 
       {/* CTA Section */}
-      <section className="bg-gray-900 py-12 px-4 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-5">
+      <section className="bg-[#0d0d0d] py-16 sm:py-20 px-4 sm:px-6 text-center border-t border-[#1f1f1f]">
+
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
           Let’s Build Something Amazing Together 🚀
         </h2>
-        <a
-          href="mailto:zeeshannawaz.makaut.it@gmail.com"
-          className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium shadow-lg hover:scale-105 transition-transform duration-300"
+
+        <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed mb-10">
+          Passionate about building scalable enterprise applications,
+          workflow automation solutions, and modern digital experiences.
+        </p>
+
+        <Link to={"./Contact"}
+         className="inline-block w-full sm:w-auto px-8 py-4 bg-[#86BC25] text-black font-bold rounded-xl hover:scale-105 transition duration-300 shadow-lg"
         >
           Contact Me
-        </a>
+        </Link>
+
       </section>
     </>
   );

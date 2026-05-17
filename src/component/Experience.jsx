@@ -1,42 +1,49 @@
 import React from "react";
-import { Briefcase, GraduationCap, Code2 } from "lucide-react"; // icons
-
+import {
+  Briefcase,
+  GraduationCap,
+  Code2,
+} from "lucide-react";
 
 const experiences = [
   {
-    title: "Software Developer (Backend)",
-    company: "Eazybe, Remote | Jan 2026 – Present",
+    title: "ServiceNow Developer",
+    company: "Deloitte USI | Mar 2026 – Present",
     description:
-      "Currently working as a Software Developer (Backend) for B2B SaaS products. Developing scalable backend services with Node.js & Express.js, designing secure REST APIs with JWT authentication, and implementing role-based access control (RBAC) for different user types. Collaborating with frontend, product, and QA teams for end-to-end feature delivery.",
-    icon: <Briefcase size={22} className="text-white" />,
+      "Currently working as a ServiceNow Developer at Deloitte USI, contributing to enterprise workflow automation and scalable business solutions. Experienced in Client Scripts, Business Rules, GlideAjax, Flow Designer, Service Portal, and server-side scripting while collaborating with cross-functional enterprise teams.",
+    icon: <Briefcase size={22} className="text-black" />,
   },
+
   {
     title: "Web Developer",
-    company: "Bitquest LLP, Kolkata | Feb 2025 – Dec 2025",
+    company: "Bitquest LLP | Jun 2025 – Dec 2025",
     description:
-      "Worked as a Web Developer building and maintaining responsive MERN applications. Improved mobile performance by 25% using optimized Tailwind CSS, integrated secure REST APIs with JWT, and collaborated with frontend & backend teams to deliver features end-to-end.",
-    icon: <Briefcase size={22} className="text-white" />,
+      "Worked on modern and responsive web applications using React.js, JavaScript, Tailwind CSS, Node.js, and MongoDB. Developed scalable frontend interfaces, integrated REST APIs, and improved application responsiveness and performance.",
+    icon: <Code2 size={22} className="text-black" />,
   },
+
   {
-    title: "Full-Stack Developer Intern",
-    company: "Theody Svadhyay Trailblazer LLP, Bangalore | Jul 2024 – Dec 2024",
+    title: "Full Stack Developer Intern",
+    company: "Theody Svadhyay Trailblazer LLP | 2024",
     description:
-      "Developed customer support portals using React.js, Next.js, Tailwind CSS, and Node.js. Integrated backend APIs, optimized frontend performance, and contributed in Agile sprints. Received performance bonus for impactful contributions.",
-    icon: <Code2 size={22} className="text-white" />,
+      "Worked on customer support portals using React.js, Next.js, Tailwind CSS, and Node.js. Integrated backend APIs, improved application performance, and contributed to Agile development workflows.",
+    icon: <Code2 size={22} className="text-black" />,
   },
+
   {
     title: "Web Development Intern",
-    company: "Digisamaksh Pvt. Ltd. | Jul 2024 – Sep 2024",
+    company: "Digisamaksh Pvt. Ltd. | 2024",
     description:
-      "Built a modern food delivery website using HTML, CSS, JavaScript, and React. Optimized performance with lazy loading and implemented state management using Redux Toolkit.",
-    icon: <Code2 size={22} className="text-white" />,
+      "Developed responsive web applications using React.js, JavaScript, HTML, and CSS. Optimized performance using lazy loading and Redux Toolkit for efficient state management.",
+    icon: <Code2 size={22} className="text-black" />,
   },
+
   {
     title: "B.Tech in Information Technology",
-    company: "MAKAUT University, Kolkata | 2025",
+    company: "MAKAUT University | 2025",
     description:
-      "Graduated in July 2025 with CGPA 8.8/10. Studied DSA, DBMS, OS, and Computer Networks. Finalist in Hackathon 2023 and solved 250+ DSA problems across competitive platforms.",
-    icon: <GraduationCap size={22} className="text-white" />,
+      "Graduated with strong knowledge of Data Structures & Algorithms, DBMS, Operating Systems, and Computer Networks. Solved 250+ DSA problems across coding platforms and participated in technical events and hackathons.",
+    icon: <GraduationCap size={22} className="text-black" />,
   },
 ];
 
@@ -44,43 +51,64 @@ function Experience() {
   return (
     <section
       name="experience"
-      className="w-full min-h-screen bg-gradient-to-b from-gray-800 to-black text-white py-16 px-4 sm:px-6"
+      className="w-full min-h-screen bg-black text-white py-20 px-4 sm:px-6 overflow-hidden"
     >
-      <div className="max-w-screen-xl mx-auto flex flex-col justify-center w-full h-full">
-        {/* Section Heading */}
-        <div className="pb-8 text-center sm:text-left">
-          <h2 className="text-3xl sm:text-4xl font-extrabold border-b-4 border-cyan-500 inline-block pb-2">
+      <div className="max-w-screen-xl mx-auto">
+
+        {/* Heading */}
+        <div className="mb-14 text-center md:text-left">
+
+          <p className="text-[#86BC25] uppercase tracking-[4px] text-sm font-semibold mb-3">
             Experience & Education
+          </p>
+
+          <h2 className="text-3xl sm:text-5xl font-extrabold leading-tight">
+            My Professional
+            <span className="text-[#86BC25]">
+              {" "}Journey
+            </span>
           </h2>
+
+          <div className="w-24 h-1 bg-[#86BC25] mt-5 mx-auto md:mx-0 rounded-full"></div>
+
         </div>
 
-        {/* Experience Cards */}
-        <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Timeline */}
+        <div className="relative border-l border-[#2a2a2a] ml-4 sm:ml-6 space-y-12">
+
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="relative bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-cyan-500 hover:shadow-cyan-500/30 transition-all duration-300 group"
+              className="relative pl-10 sm:pl-14"
             >
-              {/* Icon */}
-              <div className="absolute -top-6 left-6 bg-gradient-to-r from-cyan-500 to-blue-500 p-3 rounded-full shadow-md group-hover:scale-110 transition-transform duration-300">
+
+              {/* Timeline Dot */}
+              <div className="absolute -left-[22px] sm:-left-[26px] top-2 w-10 h-10 rounded-full bg-[#86BC25] flex items-center justify-center shadow-lg shadow-[#86BC25]/20">
                 {exp.icon}
               </div>
 
-              {/* Content */}
-              <div className="mt-4">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+              {/* Card */}
+              <div className="bg-[#111111] border border-[#1d1d1d] rounded-2xl p-6 sm:p-8 hover:border-[#86BC25]/40 transition-all duration-300 shadow-lg hover:shadow-[#86BC25]/10">
+
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
                   {exp.title}
                 </h3>
-                <p className="text-cyan-400 font-medium text-sm sm:text-base">
+
+                <p className="text-[#86BC25] font-medium text-sm sm:text-base mb-4">
                   {exp.company}
                 </p>
-                <p className="text-gray-300 text-sm sm:text-base mt-3 leading-relaxed">
+
+                <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
                   {exp.description}
                 </p>
+
               </div>
+
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   );

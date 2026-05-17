@@ -11,60 +11,259 @@ import mongodb from "../assets/mongo.jpeg";
 import mysql from "../assets/mysql.jpeg";
 import opps from "../assets/opps.jpeg";
 import c from "../assets/c--logo-icon-0.png";
-import nextjs from "../assets/icons8-next.js-48.png" // add a nextjs logo in assets
-import cms from "../assets/CMS.png";  
-import webdev from "../assets/Web development.jpg"// add a generic web dev logo in assets
+import nextjs from "../assets/icons8-next.js-48.png";
+import cms from "../assets/CMS.png";
+import webdev from "../assets/Web development.jpg";
 
 function Skills() {
+
   const tech = [
-    { id: 1, src: html, title: "HTML", style: "shadow-orange-500" },
-    { id: 2, src: css, title: "CSS", style: "shadow-blue-500" },
-    { id: 3, src: tailwind, title: "Tailwind CSS", style: "shadow-sky-500" },
-    { id: 4, src: js, title: "JavaScript", style: "shadow-yellow-500" },
-    { id: 5, src: ts, title: "TypeScript", style: "shadow-blue-400" },
-    { id: 6, src: react, title: "React.js", style: "shadow-blue-600" },
-    { id: 7, src: redux, title: "Redux Toolkit", style: "shadow-purple-500" },
-    { id: 8, src: Node, title: "Node.js", style: "shadow-green-500" },
-    { id: 9, src: express, title: "Express.js", style: "shadow-gray-500" },
-    { id: 10, src: mongodb, title: "MongoDB", style: "shadow-green-600" },
-    { id: 11, src: mysql, title: "MySQL", style: "shadow-blue-600" },
-    { id: 12, src: opps, title: "OOPs", style: "shadow-orange-400" },
-    { id: 13, src: c, title: "C++", style: "shadow-blue-500" },
-    { id: 14, src: nextjs, title: "Next.js", style: "shadow-gray-700" },
-    { id: 15, src: cms, title: "CMS (Content Management Systems)", style: "shadow-pink-500" },
-    { id: 16, src: webdev, title: "Web Development", style: "shadow-cyan-500" },
+
+    /* ServiceNow Skills */
+    {
+      id: 1,
+      title: "ServiceNow Development",
+    },
+
+    {
+      id: 2,
+      title: "ServiceNow Administration",
+    },
+
+    {
+      id: 3,
+      title: "Flow Designer",
+    },
+
+    {
+      id: 4,
+      title: "Service Portal",
+    },
+
+    {
+      id: 5,
+      title: "Business Rules",
+    },
+
+    {
+      id: 6,
+      title: "GlideAjax",
+    },
+
+    /* Frontend */
+    {
+      id: 7,
+      src: html,
+      title: "HTML",
+    },
+
+    {
+      id: 8,
+      src: css,
+      title: "CSS",
+    },
+
+    {
+      id: 9,
+      src: tailwind,
+      title: "Tailwind CSS",
+    },
+
+    {
+      id: 10,
+      src: js,
+      title: "JavaScript",
+    },
+
+    {
+      id: 11,
+      src: ts,
+      title: "TypeScript",
+    },
+
+    {
+      id: 12,
+      src: react,
+      title: "React.js",
+    },
+
+    {
+      id: 13,
+      src: redux,
+      title: "Redux Toolkit",
+    },
+
+    {
+      id: 14,
+      src: nextjs,
+      title: "Next.js",
+    },
+
+    /* Backend */
+    {
+      id: 15,
+      src: Node,
+      title: "Node.js",
+    },
+
+    {
+      id: 16,
+      src: express,
+      title: "Express.js",
+    },
+
+    /* Database */
+    {
+      id: 17,
+      src: mongodb,
+      title: "MongoDB",
+    },
+
+    {
+      id: 18,
+      src: mysql,
+      title: "MySQL",
+    },
+
+    /* Concepts */
+    {
+      id: 19,
+      src: c,
+      title: "C++",
+    },
+
+    {
+      id: 20,
+      src: opps,
+      title: "OOPs",
+    },
+
+    {
+      id: 21,
+      src: cms,
+      title: "CMS",
+    },
+
+    {
+      id: 22,
+      src: webdev,
+      title: "Web Development",
+    },
   ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-gray-800 to-black text-white py-16 px-4 sm:px-6 min-h-screen">
-      <div className="max-w-screen-xl mx-auto flex flex-col justify-center w-full h-full">
-        {/* Section Heading */}
-        <div className="pb-8 text-center sm:text-left">
-          <h2 className="text-3xl sm:text-4xl font-extrabold border-b-4 border-cyan-500 inline-block pb-2">
-            Skills
-          </h2>
-          <p className="py-6 text-gray-300 text-sm sm:text-base">
-            These are the technologies & concepts I've worked with
+    <section className="w-full min-h-screen bg-black text-white py-20 px-4 sm:px-6 overflow-hidden">
+
+      <div className="max-w-screen-xl mx-auto">
+
+        {/* Heading */}
+        <div className="text-center md:text-left mb-14">
+
+          <p className="text-[#86BC25] uppercase tracking-[4px] text-sm font-semibold mb-3">
+            Technical Skills
           </p>
+
+          <h2 className="text-3xl sm:text-5xl font-extrabold leading-tight">
+            Technologies &
+            <span className="text-[#86BC25]">
+              {" "}Tools
+            </span>
+          </h2>
+
+          <p className="text-gray-400 mt-5 max-w-3xl text-sm sm:text-base md:text-lg leading-relaxed">
+            Experienced in ServiceNow Administration & Development,
+            enterprise workflow automation, and full stack web development
+            using scalable modern technologies.
+          </p>
+
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center py-8 px-4 sm:px-0">
-          {tech.map(({ id, src, title, style }) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-7">
+
+          {tech.map((item) => (
+
             <div
-              key={id}
-              className={`shadow-md hover:scale-110 duration-500 py-6 rounded-lg ${style} bg-gray-900 border border-gray-700 hover:border-cyan-400`}
+              key={item.id}
+              className="group bg-[#111111] border border-[#1f1f1f] rounded-3xl p-5 sm:p-6 flex flex-col items-center justify-center hover:border-[#86BC25]/40 hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-[#86BC25]/10 min-h-[180px]"
             >
-              <img
-                src={src}
-                alt={title}
-                className="w-16 sm:w-20 mx-auto object-contain"
-              />
-              <p className="mt-4 text-sm sm:text-base font-medium">{title}</p>
+
+              {/* If Image Exists */}
+              {item.src ? (
+
+                <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-black rounded-2xl p-3 mb-5 overflow-hidden">
+
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+
+                </div>
+
+              ) : (
+
+                /* ServiceNow Text Box */
+                <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-[#86BC25]/10 border border-[#86BC25]/20 rounded-2xl mb-5">
+
+                  <span className="text-[#86BC25] font-bold text-lg text-center px-2">
+                    SN
+                  </span>
+
+                </div>
+
+              )}
+
+              {/* Title */}
+              <h3 className="text-sm sm:text-lg font-semibold text-center text-gray-200 leading-snug">
+                {item.title}
+              </h3>
+
             </div>
+
           ))}
+
         </div>
+
+        {/* Extra ServiceNow Section */}
+        <div className="mt-16 bg-[#111111] border border-[#1f1f1f] rounded-3xl p-6 sm:p-8">
+
+          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            ServiceNow Expertise 🚀
+          </h3>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            {[
+              "Client Scripts",
+              "Business Rules",
+              "GlideAjax",
+              "Flow Designer",
+              "Service Portal",
+              "Catalog Items",
+              "UI Policies",
+              "ACL & RBAC",
+              "Server-Side Scripting",
+              "Workflow Automation",
+              "REST API Integration",
+              "Incident Management",
+            ].map((skill, index) => (
+
+              <div
+                key={index}
+                className="bg-black border border-[#1f1f1f] rounded-2xl px-4 py-3 text-center text-gray-300 hover:border-[#86BC25]/40 hover:text-white transition duration-300"
+              >
+                {skill}
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
   );
 }
